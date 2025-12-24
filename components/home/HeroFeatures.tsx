@@ -58,28 +58,28 @@ const HeroFeatures = () => {
                 <div className="order-1">
                     {/* Tags */}
                     <div className="flex flex-wrap items-center gap-3 mb-6 text-sm font-semibold text-[var(--primary-color)] hero-text-reveal">
-                        <span className="flex items-center gap-2 px-3 py-1 bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-full border border-[var(--primary-color)]/20">
+                        <span className="flex items-center gap-2 px-3 py-1 bg-white/50 backdrop-blur-sm rounded-full border border-[var(--primary-color)]/20">
                             <CheckCircle className="h-4 w-4 shrink-0" />
                             <span>Smart Control</span>
                         </span>
 
-                        <span className="flex items-center gap-2 px-3 py-1 bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-full border border-[var(--primary-color)]/20">
+                        <span className="flex items-center gap-2 px-3 py-1 bg-white/50 backdrop-blur-sm rounded-full border border-[var(--primary-color)]/20">
                             <CheckCircle className="h-4 w-4 shrink-0" />
                             <span>Customization</span>
                         </span>
 
-                        <span className="flex items-center gap-2 px-3 py-1 bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-full border border-[var(--primary-color)]/20">
+                        <span className="flex items-center gap-2 px-3 py-1 bg-white/50 backdrop-blur-sm rounded-full border border-[var(--primary-color)]/20">
                             <CheckCircle className="h-4 w-4 shrink-0" />
                             <span>Voice Activation</span>
                         </span>
                     </div>
 
                     <div className="mb-8 hero-text-reveal">
-                        <h1 className="font-black font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 text-gray-900 dark:text-white drop-shadow-sm">
+                        <h1 className="font-black font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 text-gray-900 drop-shadow-sm">
                             Ultimate Home <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-orange-500">Intelligent</span><br className="hidden sm:block" /> Automation Solution
                         </h1>
 
-                        <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        <p className="text-gray-600 text-base sm:text-lg max-w-2xl leading-relaxed">
                             Experience Effortless Living with Cutting-Edge Technology. Seamlessly integrating convenience,
                             efficiency, and security into every aspect of your home life from Hommatic.
                         </p>
@@ -134,7 +134,7 @@ const HeroFeatures = () => {
                     {/* Glow behind image */}
                     <div className="absolute inset-0 bg-[var(--primary-color)] opacity-20 blur-[80px] rounded-full scale-75 animate-pulse"></div>
 
-                    <div className="relative z-10 p-2 rounded-2xl border border-white/20 dark:border-white/10 bg-white/10 dark:bg-black/10 backdrop-blur-md">
+                    <div className="relative z-10 p-2 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md">
                         <img
                             src="/herosection.png"
                             alt="Kreck Smart Home panel"
@@ -149,13 +149,13 @@ const HeroFeatures = () => {
 };
 
 const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) => (
-    <div className="hero-feature-item flex items-start gap-4 p-4 rounded-xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors border border-transparent hover:border-gray-100 dark:hover:border-gray-800">
-        <div className="flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 p-3 w-14 h-14 sm:w-16 sm:h-16 shrink-0 text-[var(--primary-color)] bg-white dark:bg-[#151515] shadow-sm">
+    <div className="hero-feature-item flex items-start gap-4 p-4 rounded-xl hover:bg-white/50 transition-colors border border-transparent hover:border-gray-100">
+        <div className="flex items-center justify-center rounded-full border border-gray-200 p-3 w-14 h-14 sm:w-16 sm:h-16 shrink-0 text-[var(--primary-color)] bg-white shadow-sm">
             <div className="w-8 h-8 sm:w-10 sm:h-10">{icon}</div>
         </div>
         <div>
-            <p className="font-bold text-gray-900 dark:text-white text-base md:text-lg mb-1">{title}</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-snug">{desc}</p>
+            <p className="font-bold text-gray-900 text-base md:text-lg mb-1">{title}</p>
+            <p className="text-sm text-gray-600 leading-snug">{desc}</p>
         </div>
     </div>
 );

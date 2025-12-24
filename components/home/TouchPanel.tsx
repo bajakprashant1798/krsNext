@@ -87,9 +87,9 @@ const TouchPanel = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative py-32 bg-[#f8f4f4] dark:bg-[#0f0f0f] min-h-[100vh] flex flex-col items-center justify-start overflow-hidden">
+        <section ref={sectionRef} className="relative py-32 bg-[#f8f4f4] min-h-[100vh] flex flex-col items-center justify-start overflow-hidden">
             <div className="relative z-10 text-center mb-12">
-                <h2 className="text-4xl md:text-6xl font-black font-heading text-[#565656] dark:text-gray-200 tracking-tight">
+                <h2 className="text-4xl md:text-6xl font-black font-heading text-gray-900 tracking-tight">
                     TOUCH PANEL
                 </h2>
                 <div className="w-24 h-1 bg-[var(--primary-color)] mx-auto mt-4 rounded-full"></div>
@@ -103,7 +103,7 @@ const TouchPanel = () => {
                 />
             </div>
 
-            <p className="relative z-10 mt-24 text-lg md:text-xl font-medium text-secondary dark:text-gray-400 tracking-wide uppercase text-center">
+            <p className="relative z-10 mt-24 text-lg md:text-xl font-medium text-gray-600 tracking-wide uppercase text-center">
                 Manufacturer of Touch Switch & Home Automation
             </p>
         </section>

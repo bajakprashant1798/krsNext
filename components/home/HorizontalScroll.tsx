@@ -61,10 +61,10 @@ const HorizontalScroll = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative overflow-hidden bg-white dark:bg-[#121212]">
+        <section ref={containerRef} className="relative overflow-hidden bg-white/80 backdrop-blur-md">
             <div ref={panelsContainerRef} className="flex flex-row w-[300%] h-screen">
                 {panels.map((panel, i) => (
-                    <div key={i} className="horizontal-panel w-screen h-screen flex flex-col md:flex-row items-center justify-center p-8 md:p-24 border-r border-gray-100 dark:border-gray-800">
+                    <div key={i} className="horizontal-panel w-screen h-screen flex flex-col md:flex-row items-center justify-center p-8 md:p-24 border-r border-gray-100">
                         {/* Left: Image */}
                         <div className="w-full md:w-1/2 flex items-center justify-center mb-8 md:mb-0">
                             <div className="relative w-[300px] md:w-[400px]">
@@ -80,7 +80,7 @@ const HorizontalScroll = () => {
 
                         {/* Right: Content */}
                         <div className="w-full md:w-1/2 space-y-8 pl-0 md:pl-12">
-                            <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary dark:text-white uppercase tracking-tighter">
+                            <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary uppercase tracking-tighter">
                                 {panel.title}
                             </h2>
                             <div className="space-y-6">
@@ -89,7 +89,7 @@ const HorizontalScroll = () => {
                                         <div className="mt-1.5 w-3 h-3 rounded-full bg-[var(--primary-color)] group-hover:scale-125 transition-transform"></div>
                                         <div>
                                             <h3 className="text-xl font-bold text-[var(--primary-color)] mb-1">{b.title}</h3>
-                                            <p className="text-gray-600 dark:text-gray-400 font-medium">{b.text}</p>
+                                            <p className="text-gray-600 font-medium">{b.text}</p>
                                         </div>
                                     </div>
                                 ))}

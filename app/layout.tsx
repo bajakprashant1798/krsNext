@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Orbitron, Open_Sans } from "next/font/google";
 import "./globals.css";
-import TechBackground from "@/components/ui/TechBackground";
+import HexTechBackground from "@/components/ui/HexTechBackground";
+import Navbar from "@/components/Navbar";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -28,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${openSans.variable} ${orbitron.variable} antialiased`}
+        className={`${openSans.variable} ${orbitron.variable} antialiased selection:bg-[#ff0000] selection:text-white`}
       >
-        <TechBackground />
+        <HexTechBackground />
+        <Navbar />
         <div className="relative z-10">
           {children}
         </div>

@@ -14,8 +14,8 @@
   :root {
     --primary-color: #dc2223;
     --secondary-color: #565656;
-    --background: #ffffff;
-    --foreground: #000000;
+    --background: #fdfdfd;
+    --foreground: #171717;
 
     /* Digital / Glassmorphism Vars */
     --glass-bg: rgba(255, 255, 255, 0.1);

@@ -58,7 +58,7 @@ const TechBackground = () => {
     }, []);
 
     return (
-        <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-40 dark:opacity-30">
+        <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-40">
             {/* 
          LAYER 1: GRID REMOVED
       */}
@@ -66,7 +66,7 @@ const TechBackground = () => {
             {/* LAYER 2: Floating Binary (Background Noise) - Visible again */}
             <div className="absolute inset-0 flex flex-wrap justify-around items-center opacity-40 gap-20">
                 {Array.from({ length: 15 }).map((_, i) => (
-                    <div key={i} className="tech-particle text-[10px] md:text-xs font-mono text-gray-400 dark:text-gray-600 font-bold select-none">
+                    <div key={i} className="tech-particle text-[10px] md:text-xs font-mono text-gray-400 font-bold select-none">
                         {Math.random().toString(2).slice(2, 8)}
                     </div>
                 ))}

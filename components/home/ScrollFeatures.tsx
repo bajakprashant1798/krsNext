@@ -164,7 +164,7 @@ const ScrollFeatures = () => {
                                     {feature.text}
                                 </p>
                                 <div>
-                                    <PrimaryButton label="Know More" href={`/${feature.link}`} className="bg-white text-black hover:bg-gray-200 border-transparent" />
+                                    <PrimaryButton label="Know More" href={`/${feature.link}`} className="bg-white text-black hover:bg-gray-200 border-transparent shadow-lg" />
                                 </div>
                             </div>
                         ))}
@@ -190,14 +190,14 @@ const ScrollFeatures = () => {
             </section>
 
             {/* MOBILE VERSION */}
-            <section className="md:hidden bg-white dark:bg-black py-16 px-6 space-y-16">
+            <section className="md:hidden bg-white py-16 px-6 space-y-16">
                 {features.map((feature, i) => (
                     <div
                         key={i}
                         ref={el => { mobileFeatureRefs.current[i] = el }}
                         className="flex flex-col items-center text-center"
                     >
-                        <div className="w-full max-w-sm mb-6 bg-gray-100 dark:bg-[#111] rounded-3xl p-6 shadow-lg">
+                        <div className="w-full max-w-sm mb-6 bg-gray-50 rounded-3xl p-6 shadow-lg border border-gray-100">
                             <img
                                 src={feature.image}
                                 alt={feature.title}
@@ -205,9 +205,9 @@ const ScrollFeatures = () => {
                                 onError={(e) => { (e.target as HTMLImageElement).src = "/panel.png"; }}
                             />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                         <h3 className="text-xl font-bold text-gray-500 mb-3">{feature.subTitle}</h3>
-                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{feature.text}</p>
+                        <p className="text-gray-600 leading-relaxed mb-4">{feature.text}</p>
 
                         <PrimaryButton label="Know More" href={`/${feature.link}`} className="py-2 px-6 text-sm" />
                     </div>

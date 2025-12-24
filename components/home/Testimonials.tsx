@@ -24,10 +24,10 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <section className="py-24 bg-gray-50 dark:bg-[#0c0c0c]">
+        <section className="py-24 bg-gray-50/80 backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-heading font-black text-gray-900 dark:text-white mb-4">
+                    <h2 className="text-3xl md:text-5xl font-heading font-black text-gray-900 mb-4">
                         What Our Clients Say
                     </h2>
                     <div className="w-16 h-1 bg-[var(--primary-color)] mx-auto rounded-full"></div>
@@ -35,22 +35,22 @@ const Testimonials = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {testimonials.map((t, i) => (
-                        <div key={i} className="bg-white dark:bg-[#151515] p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 dark:border-gray-800">
+                        <div key={i} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100">
                             <div className="flex gap-1 mb-6">
                                 {[1, 2, 3, 4, 5].map(star => (
                                     <span key={star} className="text-yellow-400 text-lg">★</span>
                                 ))}
                             </div>
-                            <p className="text-gray-600 dark:text-gray-300 italic mb-6 leading-relaxed">
+                            <p className="text-gray-600 italic mb-6 leading-relaxed">
                                 "{t.text}"
                             </p>
                             <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-bold text-[var(--primary-color)]">
+                                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-[var(--primary-color)]">
                                     {t.name[0]}
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 dark:text-white text-sm">{t.name}</h4>
-                                    <p className="text-xs text-gray-500 dark:text-gray-500">{t.role}, {t.location}</p>
+                                    <h4 className="font-bold text-gray-900 text-sm">{t.name}</h4>
+                                    <p className="text-xs text-gray-500">{t.role}, {t.location}</p>
                                 </div>
                             </div>
                         </div>
