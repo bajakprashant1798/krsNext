@@ -5,6 +5,7 @@ import ScrollFeatures from "@/components/home/ScrollFeatures";
 import HorizontalScroll from "@/components/home/HorizontalScroll";
 import WhyChoose from "@/components/home/WhyChoose";
 import Testimonials from "@/components/home/Testimonials";
+import GlobalPresence from "@/components/home/GlobalPresence";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <TouchPanel />
       <ScrollFeatures />
       <HorizontalScroll />
+      <GlobalPresence />
       <WhyChoose />
       <Testimonials />
       <Footer />

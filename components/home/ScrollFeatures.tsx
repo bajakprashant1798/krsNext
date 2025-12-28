@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PrimaryButton from '@/components/ui/PrimaryButton';
 import Link from 'next/link';
+import NetworkFeaturesBackground from './NetworkFeaturesBackground';
 
 // Using the exact structure from Nuxt snippet
 const features = [
@@ -145,6 +146,9 @@ const ScrollFeatures = () => {
                 className="hidden md:block relative transition-colors duration-700"
                 style={{ backgroundColor: features[activeIndex]?.color || '#000' }}
             >
+                {/* Network Mesh Background */}
+                <NetworkFeaturesBackground />
+
                 <div className="max-w-7xl mx-auto flex">
                     {/* Left: Text Column (Scrolls) */}
                     <div className="w-1/2 ">

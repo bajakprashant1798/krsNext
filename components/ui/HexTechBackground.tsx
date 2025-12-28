@@ -83,37 +83,37 @@ const HexTechBackground = () => {
             }
         };
 
-        // Initialize Circuits (Random paths along grid)
-        const spawnCircuit = () => {
-            if (hexagons.length === 0) return;
-            // Pick random start hexagon
-            const startHex = hexagons[Math.floor(Math.random() * hexagons.length)];
-            const path: Point[] = [{ x: startHex.x, y: startHex.y }];
-            let currentX = startHex.x;
-            let currentY = startHex.y;
+        // // Initialize Circuits (Random paths along grid)
+        // const spawnCircuit = () => {
+        //     if (hexagons.length === 0) return;
+        //     // Pick random start hexagon
+        //     const startHex = hexagons[Math.floor(Math.random() * hexagons.length)];
+        //     const path: Point[] = [{ x: startHex.x, y: startHex.y }];
+        //     let currentX = startHex.x;
+        //     let currentY = startHex.y;
 
-            // Generate path of 5-10 steps
-            const length = 5 + Math.random() * 8;
-            for (let i = 0; i < length; i++) {
-                // Simple random walk (this is approximate)
-                const angle = (Math.floor(Math.random() * 6) * Math.PI) / 3;
-                currentX += Math.cos(angle) * hexSize * 1.5;
-                currentY += Math.sin(angle) * hexSize * 1.5;
-                path.push({ x: currentX, y: currentY });
-            }
+        //     // Generate path of 5-10 steps
+        //     const length = 5 + Math.random() * 8;
+        //     for (let i = 0; i < length; i++) {
+        //         // Simple random walk (this is approximate)
+        //         const angle = (Math.floor(Math.random() * 6) * Math.PI) / 3;
+        //         currentX += Math.cos(angle) * hexSize * 1.5;
+        //         currentY += Math.sin(angle) * hexSize * 1.5;
+        //         path.push({ x: currentX, y: currentY });
+        //     }
 
-            circuits.push({
-                path,
-                progress: 0,
-                speed: 4 + Math.random() * 3,
-                color: 'rgba(37, 99, 235, 0.8)' // Strong Blue
-            });
+        //     circuits.push({
+        //         path,
+        //         progress: 0,
+        //         speed: 4 + Math.random() * 3,
+        //         color: 'rgba(37, 99, 235, 0.8)' // Strong Blue
+        //     });
 
-            // Cleanup old circuits
-            if (circuits.length > 8) circuits.shift();
-        };
+        //     // Cleanup old circuits
+        //     if (circuits.length > 8) circuits.shift();
+        // };
 
-        const circuitInterval = setInterval(spawnCircuit, 1000); // More frequent circuits
+        // const circuitInterval = setInterval(spawnCircuit, 1000); // More frequent circuits
 
         // Draw Helper: Single Hexagon
         const drawHex = (x: number, y: number, size: number, active: number) => {
@@ -229,7 +229,7 @@ const HexTechBackground = () => {
             window.removeEventListener('resize', resize);
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('scroll', handleScroll);
-            clearInterval(circuitInterval);
+            // clearInterval(circuitInterval);
             cancelAnimationFrame(animationFrameId);
         };
     }, []);
