@@ -51,7 +51,7 @@ const HeroFeatures = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative pt-32 md:pt-48 px-6 md:px-12 overflow-hidden min-h-screen flex items-center z-10 w-full">
+        <section ref={containerRef} className="relative pt-32 pb-16 md:pt-32 px-6 md:px-12 overflow-hidden min-h-screen flex items-center z-10 w-full">
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
                 {/* LEFT: Content */}
@@ -74,7 +74,7 @@ const HeroFeatures = () => {
                         </span>
                     </div>
 
-                    <div className="mb-8 hero-text-reveal">
+                    <div className="mb-6 hero-text-reveal">
                         <h1 className="font-black font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 text-gray-900 drop-shadow-sm">
                             Ultimate Home <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-orange-500">Intelligent</span><br className="hidden sm:block" /> Automation Solution
                         </h1>
@@ -149,12 +149,12 @@ const HeroFeatures = () => {
 };
 
 const FeatureItem = ({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) => (
-    <div className="hero-feature-item flex items-start gap-4 p-4 rounded-xl hover:bg-white/50 transition-colors border border-transparent hover:border-gray-100">
+    <div className="hero-feature-item flex items-start gap-4 p-2 rounded-xl hover:bg-white/50 transition-colors border border-transparent hover:border-gray-100">
         <div className="flex items-center justify-center rounded-full border border-gray-200 p-3 w-14 h-14 sm:w-16 sm:h-16 shrink-0 text-[var(--primary-color)] bg-white shadow-sm">
             <div className="w-8 h-8 sm:w-10 sm:h-10">{icon}</div>
         </div>
         <div>
-            <p className="font-bold text-gray-900 text-base md:text-lg mb-1">{title}</p>
+            <p className="font-bold font-heading text-gray-900 text-base md:text-lg mb-1">{title}</p>
             <p className="text-sm text-gray-600 leading-snug">{desc}</p>
         </div>
     </div>

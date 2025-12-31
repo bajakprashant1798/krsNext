@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Orbitron, Open_Sans } from "next/font/google";
+import { Outfit, Open_Sans } from "next/font/google";
 import "./globals.css";
 import HexTechBackground from "@/components/ui/HexTechBackground";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 const openSans = Open_Sans({
@@ -29,13 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${openSans.variable} ${orbitron.variable} antialiased selection:bg-[#ff0000] selection:text-white`}
+        className={`${openSans.variable} ${outfit.variable} antialiased selection:bg-[#ff0000] selection:text-white`}
       >
         <HexTechBackground />
         <Navbar />
         <div className="relative z-10">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

@@ -12,7 +12,7 @@ const features = [
         title: "King Series",
         subTitle: "Touch Panel",
         text: "The pinnacle of sophistication. Sleek touch panel switches that blends luxury with seamless home automation.",
-        link: "contact",
+        link: "products/king-series-touch-panel",
         image: "/images/products/king_touch_panel/k_touch_panel.png",
         color: "#00071b"
     },
@@ -20,7 +20,7 @@ const features = [
         title: "Royal Series",
         subTitle: "Touch Panel",
         text: "Intelligent design meets effortless control. Touch and dimmer functionality for a smarter, more elegant living.",
-        link: "contact",
+        link: "products/royal-series-touch-panel",
         image: "/images/products/royal_touch_panel/r_touch_panel.png",
         color: "#0142ab"
     },
@@ -28,7 +28,7 @@ const features = [
         title: "Smart Series",
         subTitle: "Retrofit Switch",
         text: "Classic made contemporary. Transform your existing switches into smart, automated elegance without compromise.",
-        link: "contact",
+        link: "products/smart-series-retrofit",
         image: "/images/products/smart_retrofit/s_retrofit.png",
         color: "#022e67"
     },
@@ -36,39 +36,39 @@ const features = [
         title: "Sensor Hub",
         subTitle: "",
         text: "Smart power saving mode, workflow support, and seamless integration with smart home systems.",
-        link: "contact",
+        link: "products/sensor-hub",
         image: "/images/products/sensor_hub/sensor_hub.png",
         color: "#001453"
     },
     {
         title: "Digital Door Lock",
         subTitle: "",
-        text: "Classic made contemporary. Transform your existing switches into smart, automated elegance without compromise. (Made in China)",
-        link: "contact",
+        text: "Advanced biometric and digital security for your home. Keyless entry with remote access capabilities.",
+        link: "products/digital-door-lock",
         image: "/images/products/door_lock/door_lock.png",
         color: "#333"
     },
     {
         title: "Intruder Alert Sensor",
         subTitle: "",
-        text: "Classic made contemporary. Transform your existing switches into smart, automated elegance without compromise. (Made in China)",
-        link: "contact",
+        text: "Real-time security monitoring with instant notifications. Protect your home with smart intruder detection.",
+        link: "products/intruder-alert-sensor",
         image: "/images/products/intruder_alert/intruder_alert.png",
         color: "#444"
     },
     {
         title: "Door Window &",
         subTitle: "Cuboart Sensor Alert",
-        text: "Classic made contemporary. Transform your existing switches into smart, automated elegance without compromise.",
-        link: "contact",
-        image: "/images/products/panel1.png",
+        text: "Compact sensors that monitor entry points. Trigger scenes or alarms when doors or windows are opened.",
+        link: "products/door-window-sensor",
+        image: "/images/products/door_sensor/door_sensor.png",
         color: "#555"
     },
     {
         title: "Automatic Curtain",
         subTitle: "",
-        text: "Classic made contemporary. Transform your existing switches into smart, automated elegance without compromise.",
-        link: "contact",
+        text: "Automate your curtains for privacy and energy efficiency. Control via app, voice, or schedule.",
+        link: "products/automatic-curtain",
         image: "/images/products/automatic_curtain/automatic_curtain.png",
         color: "#666"
     },
@@ -156,20 +156,18 @@ const ScrollFeatures = () => {
                             <div
                                 key={i}
                                 ref={el => { featureTextRefs.current[i] = el }}
-                                className="h-screen flex flex-col justify-center px-12"
+                                className="h-screen flex flex-col justify-center items-start px-12"
                             >
-                                <h2 className="text-5xl lg:text-7xl font-bold text-white mb-2 leading-tight">
+                                <h2 className="text-5xl lg:text-7xl font-bold font-heading text-white mb-2 leading-tight">
                                     {feature.title}
                                 </h2>
-                                <h2 className="text-5xl lg:text-7xl font-bold text-gray-300 mb-6 leading-tight">
+                                <h2 className="text-5xl lg:text-7xl font-bold font-heading text-gray-300 mb-6 leading-tight">
                                     {feature.subTitle}
                                 </h2>
                                 <p className="text-xl text-gray-300 mb-8 max-w-md leading-relaxed">
                                     {feature.text}
                                 </p>
-                                <div>
-                                    <PrimaryButton label="Know More" href={`/${feature.link}`} className="bg-white text-black hover:bg-gray-200 border-transparent shadow-lg" />
-                                </div>
+                                <PrimaryButton label="Know More" href={`/${feature.link}`} />
                             </div>
                         ))}
                     </div>
@@ -209,8 +207,8 @@ const ScrollFeatures = () => {
                                 onError={(e) => { (e.target as HTMLImageElement).src = "/panel.png"; }}
                             />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                        <h3 className="text-xl font-bold text-gray-500 mb-3">{feature.subTitle}</h3>
+                        <h3 className="text-2xl font-bold font-heading text-gray-900 mb-2">{feature.title}</h3>
+                        <h3 className="text-xl font-bold font-heading text-gray-500 mb-3">{feature.subTitle}</h3>
                         <p className="text-gray-600 leading-relaxed mb-4">{feature.text}</p>
 
                         <PrimaryButton label="Know More" href={`/${feature.link}`} className="py-2 px-6 text-sm" />

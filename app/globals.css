@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 
   --color-primary: #dc2223;
   --color-secondary: #565656;
@@ -59,4 +59,9 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Force Font Heading if Tailwind Variable Fails */
+.font-heading {
+  font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }

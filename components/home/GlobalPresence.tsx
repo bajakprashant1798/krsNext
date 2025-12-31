@@ -21,7 +21,7 @@ const GlobalPresence = () => {
         <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
                 <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
+                    <h2 className="text-4xl md:text-5xl font-bold font-heading bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
                         Global Presence
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">

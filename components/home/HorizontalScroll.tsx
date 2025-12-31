@@ -88,7 +88,7 @@ const HorizontalScroll = () => {
                                     <div key={j} className="flex gap-4 items-start group">
                                         <div className="mt-1.5 w-3 h-3 rounded-full bg-[var(--primary-color)] group-hover:scale-125 transition-transform"></div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-[var(--primary-color)] mb-1">{b.title}</h3>
+                                            <h3 className="text-xl font-bold font-heading text-[var(--primary-color)] mb-1">{b.title}</h3>
                                             <p className="text-gray-600 font-medium">{b.text}</p>
                                         </div>
                                     </div>

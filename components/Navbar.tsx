@@ -36,7 +36,7 @@ const Navbar = () => {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center space-x-1 bg-gray-100 rounded-full px-2 py-1.5 shadow-inner">
-                    {['Home', 'Products', 'Smart Home', 'About'].map((item) => (
+                    {['Home', 'Products', 'About'].map((item) => (
                         <Link
                             key={item}
                             href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
@@ -68,7 +68,7 @@ const Navbar = () => {
                     }`}
             >
                 <nav className="flex flex-col p-6 space-y-4 text-center">
-                    {['Home', 'Products', 'Smart Home', 'About', 'Contact'].map((item) => (
+                    {['Home', 'Products', 'About', 'Contact'].map((item) => (
                         <Link
                             key={item}
                             href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
