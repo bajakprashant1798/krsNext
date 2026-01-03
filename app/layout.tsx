@@ -4,6 +4,7 @@ import "./globals.css";
 import HexTechBackground from "@/components/ui/HexTechBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/ui/FloatingActions";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <div className="relative z-10">
           {children}
         </div>
+        <FloatingActions />
         <Footer />
       </body>
     </html>

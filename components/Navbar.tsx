@@ -1,23 +1,44 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 40);
-        };
-        window.addEventListener('scroll', handleScroll);
+            const currentScrollY = window.scrollY;
 
+            // Background check
+            setScrolled(currentScrollY > 40);
+
+            // Visibility check (Smart Navbar)
+            if (currentScrollY > 100) {
+                // Determine direction
+                const direction = currentScrollY > lastScrollY ? 'down' : 'up';
+                setIsVisible(direction === 'up');
+            } else {
+                // Always visible at the very top
+                setIsVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [lastScrollY]);
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
+        <header
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 transform 
+            ${scrolled ? 'py-2' : 'py-4'} 
+            ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        >
             <div
                 className={`flex items-center justify-between mx-4 sm:mx-8 px-6 py-3 rounded-2xl shadow-lg transition-all duration-300 border border-black/5 backdrop-blur-md ${'bg-white/80 text-gray-900'
                     }`}
