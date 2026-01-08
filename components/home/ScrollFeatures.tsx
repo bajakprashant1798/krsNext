@@ -46,7 +46,7 @@ const features = [
         text: "Advanced biometric and digital security for your home. Keyless entry with remote access capabilities.",
         link: "products/digital-door-lock",
         image: "/images/products/door_lock/door_lock.png",
-        color: "#333"
+        color: "#0c2461"
     },
     {
         title: "Intruder Alert Sensor",
@@ -54,7 +54,7 @@ const features = [
         text: "Real-time security monitoring with instant notifications. Protect your home with smart intruder detection.",
         link: "products/intruder-alert-sensor",
         image: "/images/products/intruder_alert/intruder_alert.png",
-        color: "#444"
+        color: "#112d4e"
     },
     {
         title: "Door Window &",
@@ -62,7 +62,7 @@ const features = [
         text: "Compact sensors that monitor entry points. Trigger scenes or alarms when doors or windows are opened.",
         link: "products/door-window-sensor",
         image: "/images/products/door_sensor/door_sensor.png",
-        color: "#555"
+        color: "#1b262c"
     },
     {
         title: "Automatic Curtain",
@@ -70,7 +70,7 @@ const features = [
         text: "Automate your curtains for privacy and energy efficiency. Control via app, voice, or schedule.",
         link: "products/automatic-curtain",
         image: "/images/products/automatic_curtain/automatic_curtain.png",
-        color: "#666"
+        color: "#2c3e50"
     },
 ];
 

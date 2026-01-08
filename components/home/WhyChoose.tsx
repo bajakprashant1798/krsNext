@@ -28,12 +28,18 @@ const whyItems = [
     },
 ];
 
-const brandRow1 = [
-    "Apple Homekit", "Samsung SmartThings", "Sonos", "Google Home", "IFTTT", "Amazon Alexa"
-];
-
-const brandRow2 = [
-    "Zigbee 3.0", "Home Assistant", "Apple Airplay", "Matter", "Thread"
+const compatibleBrands = [
+    { name: "Apple HomeKit", src: "/compatible_icons/works-with-apple-homekit.png" },
+    { name: "Google Home", src: "/compatible_icons/works-with-google-home.png" },
+    { name: "Amazon Alexa", src: "/compatible_icons/works-with-amazon-alexa.png" },
+    { name: "Samsung SmartThings", src: "/compatible_icons/works-with-samsung-smartthings.png" },
+    { name: "IFTTT", src: "/compatible_icons/works-with-ifttt.png" },
+    { name: "Sonos", src: "/compatible_icons/works-with-sonos-wireless-audio.png" },
+    { name: "Zigbee", src: "/compatible_icons/works-with-zigbee-3.0.png" },
+    { name: "Matter", src: "/compatible_icons/works-with-matter.png" },
+    { name: "Thread", src: "/compatible_icons/works-with-thread.png" },
+    { name: "Home Assistant", src: "/compatible_icons/works-with-home-assistant.png" },
+    { name: "Apple AirPlay", src: "/compatible_icons/works-with-apple-airplay.png" },
 ];
 
 const WhyChoose = () => {
@@ -76,16 +82,18 @@ const WhyChoose = () => {
                 <p className="mt-2 text-sm text-[#565656] uppercase tracking-widest">compatible with</p>
             </div>
 
-            {/* Brands Ticker (Simplified as Grid for now) */}
-            <div className="max-w-6xl mx-auto space-y-8 relative z-10 opacity-70">
-                <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
-                    {brandRow1.map((b, i) => (
-                        <span key={i} className="text-lg md:text-xl font-bold text-gray-400 hover:text-[var(--primary-color)] transition-colors cursor-default">{b}</span>
-                    ))}
-                </div>
-                <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
-                    {brandRow2.map((b, i) => (
-                        <span key={i} className="text-lg md:text-xl font-bold text-gray-400 hover:text-[var(--primary-color)] transition-colors cursor-default">{b}</span>
+            {/* Brands Grid */}
+            <div className="max-w-6xl mx-auto relative z-10">
+                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 px-4">
+                    {compatibleBrands.map((brand, i) => (
+                        <div key={i} className="group relative flex items-center justify-center p-2 transition-transform duration-300 hover:scale-110">
+                            <img
+                                src={brand.src}
+                                alt={brand.name}
+                                title={brand.name}
+                                className="h-10 md:h-12 w-auto object-contain transition-all duration-500"
+                            />
+                        </div>
                     ))}
                 </div>
             </div>
