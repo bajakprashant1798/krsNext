@@ -121,3 +121,33 @@ export async function deleteDocument(documentId: string) {
         return { success: false, message: error.message }
     }
 }
+
+export async function assignDocument(formData: FormData) {
+    const role = formData.get('role') as string
+    const documentId = formData.get('documentId') as string
+
+    // Validate inputs
+    if (!role || !documentId) {
+        return { success: false, message: 'Role and Document ID are required' }
+    }
+
+    const supabase = await createServerSupabase()
+
+    try {
+        const { error } = await supabase
+            .from('document_assignments')
+            .upsert({
+                document_id: documentId,
+                role: role
+            }, { onConflict: 'document_id, role' })
+
+        if (error) throw error
+
+        revalidatePath('/dashboard/admin')
+        return { success: true, message: 'Document assigned successfully' }
+    } catch (error: any) {
+        console.error('Error assigning document:', error)
+        return { success: false, message: error.message || 'Unknown error' }
+    }
+}
+
