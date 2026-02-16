@@ -1,0 +1,24 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    # Run at 00:00 every Monday
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Keep-Alive Endpoint
+        run: |
+          # Replace with your actual deployed URL or use a repository secret
+          # Example: curl -X GET https://your-project.vercel.app/api/cron/keep-alive
+          
+          if [ -z "${{ secrets.NEXT_PUBLIC_SITE_URL }}" ]; then
+            echo "Warning: NEXT_PUBLIC_SITE_URL secret not found. Using placeholder."
+            echo "Please configure 'NEXT_PUBLIC_SITE_URL' in your GitHub Repository Secrets."
+          else
+            echo "Pinging ${{ secrets.NEXT_PUBLIC_SITE_URL }}/api/cron/keep-alive"
+            curl -s -o /dev/null -w "%{http_code}" -X GET "${{ secrets.NEXT_PUBLIC_SITE_URL }}/api/cron/keep-alive"
+          fi

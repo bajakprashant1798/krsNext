@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Open_Sans } from "next/font/google";
 import "./globals.css";
-import HexTechBackground from "@/components/ui/HexTechBackground";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FloatingActions from "@/components/ui/FloatingActions";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -33,13 +29,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${outfit.variable} antialiased selection:bg-[#ff0000] selection:text-white`}
       >
-        <HexTechBackground />
-        <Navbar />
-        <div className="relative z-10">
-          {children}
-        </div>
-        <FloatingActions />
-        <Footer />
+        {children}
       </body>
     </html>
   );
