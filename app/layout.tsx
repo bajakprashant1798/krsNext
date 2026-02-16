@@ -17,6 +17,9 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Kreck Robotics | Smart Home Automation",
   description: "Ultimate Home Intelligent Automation Solution by Kreck Robotics.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
